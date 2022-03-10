@@ -1,2 +1,6 @@
 ---
 # defaults file for system_upgrade
+
+# reboot the windows system automatically
+system_upgrade_windows_reboot: 'yes'
+

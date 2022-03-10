@@ -3,5 +3,5 @@
 - name: system_upgrade - upgrade all packages - Windows
   ansible.windows.win_updates:
     category_names: '*'
-    reboot: no
+    reboot: {{ system_upgrade_windows_reboot }}
     reboot_timeout: 3600
