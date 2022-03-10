@@ -34,7 +34,7 @@ Example Playbook
 This role can be used e.g. with the following playbook:
 ```
 ---
-- name: enable snmp
+- name: upgrade all packages on system
   hosts: server
   remote_user: root
   roles:
