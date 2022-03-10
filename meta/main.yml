@@ -13,9 +13,17 @@ galaxy_info:
       versions: all
     - name: Debian
       versions: all
-    - name: RedHat
+    - name: Devuan
       versions: all
-    - name: Suse
+    - name: EL
+      versions: all
+    - name: Fedora
+      versions: all
+    - name: opensuse
+      versions: all
+    - name: SLES
+      versions: all
+    - name: Ubuntu
       versions: all
     - name: Windows
       versions: all
