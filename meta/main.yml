@@ -6,8 +6,23 @@ galaxy_info:
 
   min_ansible_version: 2.10
 
+  platforms:
+    - name: Alpine
+      versions: all
+    - name: Archlinux
+      versions: all
+    - name: Debian
+      versions: all
+    - name: RedHat
+      versions: all
+    - name: Suse
+      versions: all
+    - name: Windows
+      versions: all
+
   galaxy_tags:
     - linux
+    - windows
     - system
     - update
     - upgrade
