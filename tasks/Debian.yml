@@ -1,0 +1,8 @@
+---
+# tasks file for system_upgrade - Debian based OS
+- name: system_upgrade - upgrade all packages - Debian based OS
+  ansible.builtin.apt:
+    update_cache: yes
+    upgrade: full
+    autoclean: yes
+    autoremove: no
