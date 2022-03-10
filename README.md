@@ -1,38 +1,55 @@
-Role Name
-=========
+system_upgrade
+==============
 
-A brief description of the role goes here.
+This ansible role upgrades all packages on linux and windows systems.
+In default configuration all packages will be upgraded to the latest version available. A windows system will automatically reboot if it is required and continue to install updates after the reboot (if it's not disabled in ansible variable).
+
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+This role has no special requirements.
+
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Here is a list of variables defined in **defaults/main.yml**: 
+
+```
+# reboot the windows system automatically
+system_upgrade_windows_reboot: 'yes'
+```
+
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+This role has no dependencies.
+
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+This role can be used e.g. with the following playbook:
+```
+---
+- name: enable snmp
+  hosts: server
+  remote_user: root
+  roles:
+    - christian_becker.system_upgrade
+```
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
 
 License
 -------
 
-BSD
+MIT
+
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+* **Christian Becker** - [christian-becker](https://github.com/christian-becker)  
+
