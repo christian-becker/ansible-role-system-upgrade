@@ -1,0 +1,8 @@
+---
+# tasks file for system_upgrade - RedHat based OS
+- name: system_upgrade - upgrade all packages - RedHat based OS
+  ansible.builtin.yum:
+    autoremove: no
+    name: '*'
+    state: latest
+    update_cache: yes
