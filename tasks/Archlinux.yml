@@ -1,0 +1,6 @@
+---
+# tasks file for system_upgrade - Arch Linux
+- name: system_upgrade - upgrade all packages - Arch Linux
+  community.general.pacman:
+    update_cache: yes
+    upgrade: yes
