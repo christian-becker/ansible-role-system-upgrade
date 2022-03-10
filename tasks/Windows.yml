@@ -1,0 +1,7 @@
+---
+# tasks file for system_upgrade - Windows
+- name: system_upgrade - upgrade all packages - Windows
+  ansible.windows.win_updates:
+    category_names: '*'
+    reboot: no
+    reboot_timeout: 3600
